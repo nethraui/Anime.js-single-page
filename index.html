@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+    <button id="knowme">Know Me!</button>
+    
+    <svg viewBox = "0 0 215 110">
+        <polygon class="polymorph" points = "215,110 0,110 0,0 47.7,0 215,0 "/>
+    </svg>
+
+    <div id="aboutme">
+        <h1>I'am Nethra Rao</h1>
+        <p>UI Designer and Front-End Developer</p>
+
+        <button id="bye">BYE!</button>
+    </div>
+ 
+    <script src="./anime.min.js"></script>
+
+    <script>
+        var btn1 = document.getElementById('knowme');
+        var btn2 = document.getElementById('bye'); 
+
+        btn1.onclick = function(){
+            var morphing = anime({
+                targets: '.polymorph',
+                points: [
+                    { value: '215,110 0,110 0,0 47.7,0 67,76' },
+                    {value: '215,110 0,110 0,0 0,0 67,76' }
+                ],
+                easing: 'easeOutQuad',
+                duration: 1200,
+                loop: false
+            });
+
+            anime({
+                    targets: '#aboutme',
+                    opacity:1,
+                    duration:500,
+                    translateY: 150
+                })
+
+                var promise = morphing.finished.then(() =>{
+                    btn2.onclick=function(){
+                        var morphing = anime({
+                            targets: '.polymorph',
+                            points: [
+                                { value: '215,110 0,110 0,0 47.7,0 67,76' },
+                                {value: '215,110 0,110 0,0 47.7,0 215,0' }
+                            ],
+                            easing: 'easeOutQuad',
+                            duration: 1200,
+                            loop: false
+                        });
+ 
+                        anime({
+                            targets: '#aboutme',
+                            opacity:0,
+                            duration:500,
+                            translateY: -800
+                        })
+                    }
+                    
+                })
+        }
+
+        
+    </script>
+</body>
+</html>

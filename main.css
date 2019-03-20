@@ -1,0 +1,65 @@
+body{
+    margin: 0;
+    font-family: 'sans-serif'
+}
+
+.polymorph{
+    fill: #045E6C;
+}
+
+#knowme, #bye{
+    position: absolute;
+    margin: 10em auto 0 auto;
+    left: 0;
+    right: 0;
+    width: 30%;
+    background: none;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 15px;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    outline: 0;
+}
+
+
+/*#knowme{
+    display: inline-block;
+    transition: all 650ms;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    padding: 1rem;
+    color: #045E6C;
+    border-bottom: 2px solid black;
+    margin: 2rem 0 4rem 0;
+}
+
+#knowme:hover{
+    background-color: #D6ECE0;
+    color: #D6ECE0;
+}*/
+
+#bye{
+    width: auto;
+    margin: 30px auto;
+    background: #045E6C;
+}
+#aboutme{
+    position:absolute;
+    color: #045E6C;
+    right: 25%;
+    top: 0;
+    opacity: 0;
+    width: 30%;
+    transform: translateY(-800px);
+}
+
+h1{
+    font-size: 1.8rem;
+}
+
+p{
+    font-size: 1.2rem;
+}
